@@ -5,13 +5,14 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonButton, Ion
 import { ActivatedRoute } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AventureTimeService } from 'src/app/services/aventure-time.service';
+import { CardComponent } from 'src/app/component/card/card.component';
 
 @Component({
   selector: 'app-game-details',
   templateUrl: './game-details.page.html',
   styleUrls: ['./game-details.page.scss'],
   standalone: true,
-  imports: [IonItem, IonLabel, IonText, IonCardContent, IonCard, IonAvatar, IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,SharedModule]
+  imports: [IonItem, IonLabel, IonText, IonCardContent, IonCard, IonAvatar, IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,SharedModule, CardComponent ]
 })
 export class GameDetailsPage implements OnInit {
 gameId: string='';

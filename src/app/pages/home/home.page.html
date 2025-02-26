@@ -36,23 +36,11 @@
           <ng-template #gameList>
             <ion-row>
               <ion-col routerLink="/game-details/{{game.id}}" size="6" size-md="4" *ngFor="let game of games">
-                  
-                <ion-card>
+                
+                <app-card   [thumbnail]="game.thumbnail" [title]="game.title"/>
 
-                    <img [src]="game.thumbnail" [alt]="game.title"
-                      class="game-thumbnail">
-                    <ion-card-content>
-                      <ion-text>
-                        <h3> <strong>Nombre:</strong>  {{ game.title }}</h3>
-                        <!-- Mostrar el título del juego -->
-                      </ion-text>
-                    </ion-card-content>
-
-                </ion-card>
               </ion-col>
             </ion-row>
-
-            <!-- Infinite Scroll -->
 
           </ng-template>
 

@@ -10,7 +10,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule, Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core'; 
 import { HttpClientModule } from '@angular/common/http';
-
+import { CardComponent } from 'src/app/component/card/card.component';
 
 
 @Component({
@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [IonSearchbar, IonText, IonCardContent, 
     IonCard, IonCol, IonRow, IonGrid, IonInfiniteScroll, IonInfiniteScrollContent, 
     IonSpinner, IonButton, IonItem, IonLabel, IonList, IonContent, IonHeader, 
-    IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule, RouterModule, HttpClientModule
+    IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule, RouterModule, HttpClientModule, CardComponent
   ]
 })
 export class HomePage implements OnInit {
