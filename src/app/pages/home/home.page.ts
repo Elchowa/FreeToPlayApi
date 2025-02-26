@@ -11,13 +11,14 @@ import { ChangeDetectorRef } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from 'src/app/component/card/card.component';
 import { FooterComponent } from 'src/app/component/footer/footer.component';
+import { HeaderComponent } from 'src/app/component/header/header.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonSearchbar, IonCol, IonRow, IonGrid, IonInfiniteScroll, IonInfiniteScrollContent, IonSpinner, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule, RouterModule, HttpClientModule, CardComponent, FooterComponent]
+  imports: [IonSearchbar, IonCol, IonRow, IonGrid, IonInfiniteScroll, IonInfiniteScrollContent, IonSpinner, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule, RouterModule, HttpClientModule, CardComponent, FooterComponent, HeaderComponent ]
 })
 export class HomePage implements OnInit {
   games: any[] = [];
