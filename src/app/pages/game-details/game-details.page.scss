@@ -1,51 +1,23 @@
-ion-card{
-    margin: 0%;
-}
-ion-card-content{
-    padding: 2%;
-    align-items: center;
-}
-.gamename{
-    text-transform: uppercase;
-font-size: 40px;
-}
-.description{
+.content-container {
     display: flex;
-    flex-grow: 1;
-    align-items: center; 
-    justify-content: center; 
-    text-align: justify; 
-}
-.glass-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .content-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    height: auto;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
-.game-details{
-    text-align: left;
-    padding: 5%;
-    margin: 0%;
-    padding-top: 5%;
-}
-.requisitos{
-    text-align: left;
-    padding: 5%;
-    margin: 0%;
-    padding-top: 5%;
-}
-
-
-.border{
-    border: 3px solid #fff;
-}
-
-.imgAvatare {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-}
-
+  
+  .glass-content { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

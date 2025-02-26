@@ -2,27 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { 
-  IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonLabel, IonItem, 
-  IonButton, IonSpinner, IonInfiniteScrollContent, IonInfiniteScroll, IonGrid, 
-  IonRow, IonCol, IonCard, IonCardContent, IonText, IonSearchbar } from '@ionic/angular/standalone';
+  IonContent, IonHeader, IonTitle, IonToolbar, IonSpinner, IonInfiniteScrollContent, IonInfiniteScroll, IonGrid, 
+  IonRow, IonCol, IonSearchbar } from '@ionic/angular/standalone';
 import { AventureTimeService } from 'src/app/services/aventure-time.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule, Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core'; 
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from 'src/app/component/card/card.component';
-
+import { FooterComponent } from 'src/app/component/footer/footer.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonSearchbar, IonText, IonCardContent, 
-    IonCard, IonCol, IonRow, IonGrid, IonInfiniteScroll, IonInfiniteScrollContent, 
-    IonSpinner, IonButton, IonItem, IonLabel, IonList, IonContent, IonHeader, 
-    IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule, RouterModule, HttpClientModule, CardComponent
-  ]
+  imports: [IonSearchbar, IonCol, IonRow, IonGrid, IonInfiniteScroll, IonInfiniteScrollContent, IonSpinner, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule, RouterModule, HttpClientModule, CardComponent, FooterComponent]
 })
 export class HomePage implements OnInit {
   games: any[] = [];
