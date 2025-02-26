@@ -1,0 +1,70 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <div class="glass-content ion-padding">
+
+    <div class="ion-text-center ion-padding-top" *ngIf="game">
+      <ion-card>
+
+        <img [src]="game.thumbnail" [alt]="game.title"
+          class="game-thumbnail">
+        <ion-card-content>
+          <ion-text>
+
+            <h3 class="gamename"> {{ game.title }}</h3>
+            <div class="description">{{game.description}}</div>
+
+            <ion-card class="game-details">
+              <ion-item>
+                <ion-label style="color: azure;"><strong>Detalles importantes.</strong></ion-label>
+              </ion-item>
+              <h4><strong style="text-transform: uppercase;">Genero: {{game.genre}}<br>
+                Plataforma: {{game.platform}} <br>
+                Desarrollador: {{game.publisher}} <br>
+                Fecha De Lanzamiento: {{game.release_date}}
+
+              </strong></h4>
+            </ion-card>
+            <br>
+            <ion-card class="requisitos">
+              <ion-item>
+                <ion-label style="color: azure;"><strong>Requisitos Del Sistema.</strong></ion-label>
+                
+              </ion-item>
+              <h4><strong style="text-transform: uppercase;">
+                Gráficos: {{game.minimum_system_requirements.graphics}} <br>
+                Memoria: {{game.minimum_system_requirements.memory}} <br>
+                SO: {{game.minimum_system_requirements.os}} <br>
+                Procesador: {{game.minimum_system_requirements.processor}} <br>
+                almacenamiento: {{game.minimum_system_requirementsstorage}}
+                
+
+              </strong></h4>
+            </ion-card>
+
+
+            <br>
+
+                <div class="border" *ngFor="let imga of game.screenshots">
+
+                    <img [src]="imga.image" alt="Imagen del slider" class="imgAvatare" />
+
+                </div>
+
+
+
+          </ion-text>
+        </ion-card-content>
+
+    </ion-card>
+
+    </div>
+
+  </div>
+</ion-content>

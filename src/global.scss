@@ -16,7 +16,7 @@
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
-@import "@ionic/angular/css/display.css";
+@import '@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
@@ -25,13 +25,143 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+.glass-content {
+    background: rgba(19, 63, 176, 0.27);
+    box-shadow: 0 4px 30px rgba(7, 77, 216, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(25.3px);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se adaptan al tamaño de la pantalla */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(7, 7, 7, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    width: 100%;
+    max-width: 500px; /* Limita el tamaño de cada tarjeta */
+}
+
+.game-thumbnail {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-info {
+    text-align: center;
+    color: white;
+}
+
+
+
+ion-grid {
+    display: flex;
+    justify-content: center;
+}
+
+ion-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+ion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --ion-background-color: transparent;
+    background: url(/assets/img/fondo.avif) no-repeat center center fixed;
+    background-size: cover;
+    --color: white;
+}
+
+
+ion-header {
+
+    color: #000;
+}
+
+ion-toolbar {
+    --background: transparent;
+    background: rgba(19, 63, 176, 0.27);
+    box-shadow: 0 4px 30px rgba(7, 77, 216, 0.1);
+    backdrop-filter: blur(25.3px);
+    -webkit-backdrop-filter: blur(25.3px);
+    color: white;
+}
+
+
+ion-card {
+
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    background: rgba(7, 7, 7, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+ion-item {
+    background: transparent !important;
+}
+
+ion-icon {
+    color: white;
+}
+
+.loader {
+    text-align: center;
+    padding-top: 15vh;
+
+    ion-spinner {
+        padding: 50px;
+        --color: white;
+    }
+}
+
+p {
+    font-size: 1em;
+}

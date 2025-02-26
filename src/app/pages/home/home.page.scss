@@ -1,0 +1,29 @@
+.version {
+    font-size: 14px;
+}
+ion-item {
+    background: transparent !important;
+  }
+  .game-thumbnail {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 400px; /* Ajusta según tu preferencia */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    padding-bottom: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600%;
+}
+
+ion-card{
+  transition: transform 0.3s ease-in-out;
+}
+
+ion-searchbar{
+  --background: #fff;
+}
+
+ion-card:hover{
+  cursor: pointer;
+  background: #5d166e79;
+  transform: scale(1.05);
+}
