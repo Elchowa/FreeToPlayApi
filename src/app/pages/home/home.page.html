@@ -1,0 +1,72 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-title>
+      <div class="version">Ionic v7</div>
+      <div style="text-align: center;"><strong>FREE TO PLAY GAMES</strong></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <div class="glass-content">
+    <ion-grid class="card-container">
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-searchbar 
+          placeholder="Buscar juegos..."  
+          (ionInput)="buscarJuego($event)" 
+          [debounce]="250">
+        </ion-searchbar>
+        
+        
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col  size-lg="6" size-md="6" size-sm="12" size="12" >
+
+          <!-- Mostrar cargando mientras no hay juegos -->
+          <div *ngIf="games.length === 0; else gameList">
+            <ion-spinner name="crescent"></ion-spinner>
+            <p>Cargando juegos...</p>
+          </div>
+
+          <ng-template #gameList>
+            <ion-row>
+              <ion-col routerLink="/game-details/{{game.id}}" size="6" size-md="4" *ngFor="let game of games">
+                  
+                <ion-card>
+
+                    <img [src]="game.thumbnail" [alt]="game.title"
+                      class="game-thumbnail">
+                    <ion-card-content>
+                      <ion-text>
+                        <h3> <strong>Nombre:</strong>  {{ game.title }}</h3>
+                        <!-- Mostrar el título del juego -->
+                      </ion-text>
+                    </ion-card-content>
+
+                </ion-card>
+              </ion-col>
+            </ion-row>
+
+            <!-- Infinite Scroll -->
+
+          </ng-template>
+
+        </ion-col>
+
+
+        <ion-infinite-scroll (ionInfinite)="cargarMasJuegos($event)"
+          *ngIf="games.length < allGames.length">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="Cargando más juegos...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
